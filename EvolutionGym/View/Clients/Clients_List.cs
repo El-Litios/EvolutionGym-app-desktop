@@ -50,12 +50,38 @@ namespace EvolutionGym.View.Clients
         {
             Clients_Add c_add_form = new Clients_Add();
             c_add_form.ShowDialog();
+            using (Connection con = new Connection()) 
+            {
+                List_Load(con.tblClient.ToList());
+            }
         }
 
         private void lv_Clients_SelectedIndexChanged(object sender, EventArgs e)
         {
             btn_EditForm.Enabled = true;
             btn_Delete.Enabled = true;
+        }
+
+        private void btn_EditForm_Click(object sender, EventArgs e)
+        {
+            int client_id = Convert.ToInt32(lv_Clients.SelectedItems[0].Text);
+            using (Connection con = new Connection()) 
+            {
+                var Client = con.tblClient.Where(c => c.ClientID == client_id).FirstOrDefault();
+                if (Client != null)
+                {
+                    Clients_Edit c_edit_form = new Clients_Edit(Client);
+                    c_edit_form.ShowDialog();
+                }
+            }
+                
+
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            ConfirmationForm msg_form = new ConfirmationForm();
+            msg_form.ShowDialog();
         }
     }
 }

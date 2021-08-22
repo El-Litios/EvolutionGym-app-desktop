@@ -165,6 +165,7 @@ namespace EvolutionGym.View.Clients
             this.btn_EditForm.Text = "Edición";
             this.btn_EditForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_EditForm.UseVisualStyleBackColor = false;
+            this.btn_EditForm.Click += new System.EventHandler(this.btn_EditForm_Click);
             // 
             // btn_Delete
             // 
@@ -182,6 +183,7 @@ namespace EvolutionGym.View.Clients
             this.btn_Delete.Size = new System.Drawing.Size(51, 37);
             this.btn_Delete.TabIndex = 18;
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // Clients_List
             // 
