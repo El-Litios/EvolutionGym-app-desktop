@@ -145,6 +145,7 @@ namespace EvolutionGym
             this.btn_UsersFRM.Text = "Usuarios";
             this.btn_UsersFRM.UseVisualStyleBackColor = true;
             this.btn_UsersFRM.Visible = false;
+            this.btn_UsersFRM.Click += new System.EventHandler(this.btn_UsersFRM_Click);
             // 
             // btn_TypeMembershipFRM
             // 
@@ -231,6 +232,7 @@ namespace EvolutionGym
             this.lbl_DateNow.Size = new System.Drawing.Size(521, 37);
             this.lbl_DateNow.TabIndex = 12;
             this.lbl_DateNow.Text = "Martes, 17 de agosto de 2021";
+            this.lbl_DateNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_HourNow
             // 

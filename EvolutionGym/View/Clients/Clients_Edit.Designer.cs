@@ -29,6 +29,7 @@ namespace EvolutionGym.View.Clients
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tb_Rut = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@ namespace EvolutionGym.View.Clients
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_Cellphone = new System.Windows.Forms.TextBox();
             this.btn_EditClient = new System.Windows.Forms.Button();
+            this.Error_Message = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Error_Message)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_Rut
@@ -181,7 +184,7 @@ namespace EvolutionGym.View.Clients
             this.btn_EditClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(145)))));
             this.btn_EditClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_EditClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EditClient.Enabled = false;
+            this.btn_EditClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_EditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EditClient.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_EditClient.ForeColor = System.Drawing.Color.Black;
@@ -192,6 +195,11 @@ namespace EvolutionGym.View.Clients
             this.btn_EditClient.TabIndex = 27;
             this.btn_EditClient.Text = "GUARDAR CAMBIOS";
             this.btn_EditClient.UseVisualStyleBackColor = false;
+            this.btn_EditClient.Click += new System.EventHandler(this.btn_EditClient_Click);
+            // 
+            // Error_Message
+            // 
+            this.Error_Message.ContainerControl = this;
             // 
             // Clients_Edit
             // 
@@ -217,6 +225,8 @@ namespace EvolutionGym.View.Clients
             this.MinimizeBox = false;
             this.Name = "Clients_Edit";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.Error_Message)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +247,6 @@ namespace EvolutionGym.View.Clients
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_Cellphone;
         private System.Windows.Forms.Button btn_EditClient;
+        private System.Windows.Forms.ErrorProvider Error_Message;
     }
 }

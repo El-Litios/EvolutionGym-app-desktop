@@ -95,7 +95,7 @@ namespace EvolutionGym
             this.btn_Denied.Text = "Cancelar";
             this.btn_Denied.UseVisualStyleBackColor = false;
             // 
-            // MessageForm
+            // ConfirmationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,8 @@ namespace EvolutionGym
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MessageForm";
+            this.Name = "ConfirmationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

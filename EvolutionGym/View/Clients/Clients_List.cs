@@ -1,4 +1,5 @@
 ﻿using EvolutionGym.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,6 +73,10 @@ namespace EvolutionGym.View.Clients
                 {
                     Clients_Edit c_edit_form = new Clients_Edit(Client);
                     c_edit_form.ShowDialog();
+                    btn_Delete.Enabled = false;
+                    btn_EditForm.Enabled = false;
+
+                    List_Load(con.tblClient.ToList());
                 }
             }
                 
@@ -80,8 +85,51 @@ namespace EvolutionGym.View.Clients
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            ConfirmationForm msg_form = new ConfirmationForm();
-            msg_form.ShowDialog();
+            ConfirmationForm cform = new ConfirmationForm();
+            DialogResult res = new DialogResult();
+            res = cform.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                int client_id = Convert.ToInt32(lv_Clients.SelectedItems[0].Text);
+                using (Connection con = new Connection()) 
+                {
+                    var Client = con.tblClient.Where(c => c.ClientID == client_id).FirstOrDefault();
+
+                    con.Entry(Client).State = EntityState.Deleted;
+                    con.SaveChanges();
+
+                    btn_Delete.Enabled = false;
+                    btn_EditForm.Enabled = false;
+
+                    List_Load(con.tblClient.ToList());
+                }
+            }
+        }
+
+        private void tb_User_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tb_SearchField.Text))
+            {
+                btn_Search.Enabled = true;
+            }
+            else 
+            {
+                btn_Search.Enabled = false;
+            }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            var searching = tb_SearchField.Text;
+            using (Connection con = new Connection())
+            {
+                var Filtered_Clients = con.tblClient
+                    .Where(c =>
+                        c.ClientRut.Contains(searching) || 
+                        c.ClientName.Contains(searching))
+                    .ToList();
+                List_Load(Filtered_Clients);
+            }
         }
     }
 }

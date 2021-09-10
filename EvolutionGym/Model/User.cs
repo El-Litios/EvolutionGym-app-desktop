@@ -31,7 +31,10 @@ namespace EvolutionGym.Model
         public string UserMotherLastName { get; set; }
 
         [NotMapped]
-        public string UserCompleteName { get; set; }
+        public string UserFullName { get {
+                return UserName + " " + UserFatherLastName + " " + UserMotherLastName;
+            } 
+        }
 
         public int RoleID { get; set; }
         public Role Role { get; set; }

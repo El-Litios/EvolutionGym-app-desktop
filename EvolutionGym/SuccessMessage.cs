@@ -13,6 +13,7 @@ namespace EvolutionGym
         public SuccessMessage()
         {
             InitializeComponent();
+            
         }
 
         private void btn_Accept_Click(object sender, EventArgs e)

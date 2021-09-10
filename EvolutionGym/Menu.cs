@@ -1,5 +1,6 @@
 ﻿using EvolutionGym.Model;
 using EvolutionGym.View.Clients;
+using EvolutionGym.View.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +68,17 @@ namespace EvolutionGym
                 if (Application.OpenForms[i].Name != "Menu" && Application.OpenForms[i].Name != "Login")
                     Application.OpenForms[i].Close();
             }
+        }
+
+        private void btn_UsersFRM_Click(object sender, EventArgs e)
+        {
+            Close_All();
+            Panel_Control.Controls.Clear();
+            Users_List Users_list = new Users_List();
+            Users_list.TopLevel = false;
+            Users_list.AutoScroll = true;
+            Panel_Control.Controls.Add(Users_list);
+            Users_list.Show();
         }
     }
 }

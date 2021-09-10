@@ -1,7 +1,7 @@
 ﻿
-namespace EvolutionGym.View.Clients
+namespace EvolutionGym.View.Users
 {
-    partial class Clients_List
+    partial class Users_List
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,72 @@ namespace EvolutionGym.View.Clients
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients_List));
-            this.tb_SearchField = new System.Windows.Forms.TextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.lv_Clients = new System.Windows.Forms.ListView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users_List));
+            this.lv_Users = new System.Windows.Forms.ListView();
             this.ID = new System.Windows.Forms.ColumnHeader();
             this.Rut = new System.Windows.Forms.ColumnHeader();
-            this.NameClient = new System.Windows.Forms.ColumnHeader();
-            this.Email = new System.Windows.Forms.ColumnHeader();
-            this.Phone = new System.Windows.Forms.ColumnHeader();
+            this.NameUser = new System.Windows.Forms.ColumnHeader();
+            this.UserUser = new System.Windows.Forms.ColumnHeader();
+            this.Role = new System.Windows.Forms.ColumnHeader();
+            this.tb_SearchField = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.btn_AddForm = new System.Windows.Forms.Button();
             this.btn_EditForm = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // lv_Users
+            // 
+            this.lv_Users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(91)))), ((int)(((byte)(153)))));
+            this.lv_Users.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lv_Users.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.Rut,
+            this.NameUser,
+            this.UserUser,
+            this.Role});
+            this.lv_Users.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lv_Users.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lv_Users.FullRowSelect = true;
+            this.lv_Users.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lv_Users.HideSelection = false;
+            this.lv_Users.Location = new System.Drawing.Point(12, 48);
+            this.lv_Users.Name = "lv_Users";
+            this.lv_Users.Size = new System.Drawing.Size(1148, 524);
+            this.lv_Users.TabIndex = 16;
+            this.lv_Users.UseCompatibleStateImageBehavior = false;
+            this.lv_Users.View = System.Windows.Forms.View.Details;
+            this.lv_Users.SelectedIndexChanged += new System.EventHandler(this.lv_Users_SelectedIndexChanged);
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ID.Width = 0;
+            // 
+            // Rut
+            // 
+            this.Rut.Text = "Rut";
+            this.Rut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Rut.Width = 287;
+            // 
+            // NameUser
+            // 
+            this.NameUser.Text = "Nombre";
+            this.NameUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NameUser.Width = 287;
+            // 
+            // UserUser
+            // 
+            this.UserUser.Text = "Usuario";
+            this.UserUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UserUser.Width = 287;
+            // 
+            // Role
+            // 
+            this.Role.Text = "Rol";
+            this.Role.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Role.Width = 286;
             // 
             // tb_SearchField
             // 
@@ -53,9 +106,9 @@ namespace EvolutionGym.View.Clients
             this.tb_SearchField.Name = "tb_SearchField";
             this.tb_SearchField.PlaceholderText = "Buscador";
             this.tb_SearchField.Size = new System.Drawing.Size(218, 30);
-            this.tb_SearchField.TabIndex = 10;
+            this.tb_SearchField.TabIndex = 17;
             this.tb_SearchField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_SearchField.TextChanged += new System.EventHandler(this.tb_User_TextChanged);
+            this.tb_SearchField.TextChanged += new System.EventHandler(this.tb_SearchField_TextChanged);
             // 
             // btn_Search
             // 
@@ -71,62 +124,9 @@ namespace EvolutionGym.View.Clients
             this.btn_Search.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(42, 30);
-            this.btn_Search.TabIndex = 14;
+            this.btn_Search.TabIndex = 18;
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // lv_Clients
-            // 
-            this.lv_Clients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(91)))), ((int)(((byte)(153)))));
-            this.lv_Clients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_Clients.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.Rut,
-            this.NameClient,
-            this.Email,
-            this.Phone});
-            this.lv_Clients.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lv_Clients.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lv_Clients.FullRowSelect = true;
-            this.lv_Clients.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lv_Clients.HideSelection = false;
-            this.lv_Clients.Location = new System.Drawing.Point(12, 48);
-            this.lv_Clients.Name = "lv_Clients";
-            this.lv_Clients.Size = new System.Drawing.Size(1148, 524);
-            this.lv_Clients.TabIndex = 15;
-            this.lv_Clients.UseCompatibleStateImageBehavior = false;
-            this.lv_Clients.View = System.Windows.Forms.View.Details;
-            this.lv_Clients.SelectedIndexChanged += new System.EventHandler(this.lv_Clients_SelectedIndexChanged);
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ID.Width = 0;
-            // 
-            // Rut
-            // 
-            this.Rut.Text = "Rut";
-            this.Rut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Rut.Width = 287;
-            // 
-            // NameClient
-            // 
-            this.NameClient.Text = "Nombre";
-            this.NameClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NameClient.Width = 287;
-            // 
-            // Email
-            // 
-            this.Email.Text = "Correo";
-            this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Email.Width = 287;
-            // 
-            // Phone
-            // 
-            this.Phone.Text = "Teléfono";
-            this.Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Phone.Width = 286;
             // 
             // btn_AddForm
             // 
@@ -142,7 +142,7 @@ namespace EvolutionGym.View.Clients
             this.btn_AddForm.Margin = new System.Windows.Forms.Padding(0);
             this.btn_AddForm.Name = "btn_AddForm";
             this.btn_AddForm.Size = new System.Drawing.Size(121, 37);
-            this.btn_AddForm.TabIndex = 16;
+            this.btn_AddForm.TabIndex = 19;
             this.btn_AddForm.Text = "Agregar";
             this.btn_AddForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_AddForm.UseVisualStyleBackColor = false;
@@ -163,7 +163,7 @@ namespace EvolutionGym.View.Clients
             this.btn_EditForm.Margin = new System.Windows.Forms.Padding(0);
             this.btn_EditForm.Name = "btn_EditForm";
             this.btn_EditForm.Size = new System.Drawing.Size(121, 37);
-            this.btn_EditForm.TabIndex = 17;
+            this.btn_EditForm.TabIndex = 20;
             this.btn_EditForm.Text = "Edición";
             this.btn_EditForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_EditForm.UseVisualStyleBackColor = false;
@@ -183,26 +183,25 @@ namespace EvolutionGym.View.Clients
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(51, 37);
-            this.btn_Delete.TabIndex = 18;
+            this.btn_Delete.TabIndex = 21;
             this.btn_Delete.UseVisualStyleBackColor = false;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // Clients_List
+            // Users_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1172, 641);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_EditForm);
             this.Controls.Add(this.btn_AddForm);
-            this.Controls.Add(this.lv_Clients);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.tb_SearchField);
+            this.Controls.Add(this.lv_Users);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Clients_List";
-            this.Text = "Clients_List";
-            this.Load += new System.EventHandler(this.Clients_List_Load);
+            this.Name = "Users_List";
+            this.Text = "Users_List";
+            this.Load += new System.EventHandler(this.Users_List_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,16 +209,18 @@ namespace EvolutionGym.View.Clients
 
         #endregion
 
-        private System.Windows.Forms.TextBox tb_SearchField;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.ListView lv_Clients;
+        private System.Windows.Forms.ListView lv_Users;
         private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader NameClient;
         private System.Windows.Forms.ColumnHeader Rut;
+        private System.Windows.Forms.ColumnHeader NameUser;
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader Phone;
+        private System.Windows.Forms.TextBox tb_SearchField;
+        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_AddForm;
         private System.Windows.Forms.Button btn_EditForm;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.ColumnHeader UserUser;
+        private System.Windows.Forms.ColumnHeader Role;
     }
 }
