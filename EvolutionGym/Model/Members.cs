@@ -12,7 +12,9 @@ namespace EvolutionGym.Model
         public int MembershipID { get; set; }
         public DateTime MembershipDateBegin { get; set; }
         public DateTime MembershipDateEnd { get; set; }
-        
+        public int MembershipCost { get; set; }
+
+
         public int UserID { get; set; }
         public int TypeID { get; set; }
         public int ClientID { get; set; }
