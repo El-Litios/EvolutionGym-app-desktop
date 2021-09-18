@@ -143,6 +143,7 @@ namespace EvolutionGym.View.Memberships
             this.btn_AddForm.Text = "Agregar";
             this.btn_AddForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_AddForm.UseVisualStyleBackColor = false;
+            this.btn_AddForm.Click += new System.EventHandler(this.btn_AddForm_Click);
             // 
             // btn_DetailsForm
             // 

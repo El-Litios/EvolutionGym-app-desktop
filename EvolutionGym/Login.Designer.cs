@@ -114,7 +114,7 @@ namespace EvolutionGym
             this.btn_login.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_login.ForeColor = System.Drawing.Color.Black;
             this.btn_login.Location = new System.Drawing.Point(52, 326);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(1);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(266, 36);
             this.btn_login.TabIndex = 13;

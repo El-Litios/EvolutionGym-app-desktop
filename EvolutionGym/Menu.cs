@@ -1,5 +1,6 @@
 ﻿using EvolutionGym.Model;
 using EvolutionGym.View.Clients;
+using EvolutionGym.View.Memberships;
 using EvolutionGym.View.Users;
 using System;
 using System.Collections.Generic;
@@ -79,6 +80,17 @@ namespace EvolutionGym
             Users_list.AutoScroll = true;
             Panel_Control.Controls.Add(Users_list);
             Users_list.Show();
+        }
+
+        private void btn_MembershipFRM_Click(object sender, EventArgs e)
+        {
+            Close_All();
+            Panel_Control.Controls.Clear();
+            Memberships_List Members_list = new Memberships_List(u.UserID);
+            Members_list.TopLevel = false;
+            Members_list.AutoScroll = true;
+            Panel_Control.Controls.Add(Members_list);
+            Members_list.Show();
         }
     }
 }

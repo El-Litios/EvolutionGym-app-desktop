@@ -182,6 +182,7 @@ namespace EvolutionGym
             this.btn_MembershipFRM.Text = "Membresias";
             this.btn_MembershipFRM.UseVisualStyleBackColor = true;
             this.btn_MembershipFRM.Visible = false;
+            this.btn_MembershipFRM.Click += new System.EventHandler(this.btn_MembershipFRM_Click);
             // 
             // btn_ClientFRM
             // 
