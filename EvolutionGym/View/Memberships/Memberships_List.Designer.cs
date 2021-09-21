@@ -111,6 +111,7 @@ namespace EvolutionGym.View.Memberships
             this.btn_Search.Size = new System.Drawing.Size(42, 30);
             this.btn_Search.TabIndex = 19;
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // tb_SearchField
             // 
@@ -124,6 +125,7 @@ namespace EvolutionGym.View.Memberships
             this.tb_SearchField.Size = new System.Drawing.Size(218, 30);
             this.tb_SearchField.TabIndex = 20;
             this.tb_SearchField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_SearchField.TextChanged += new System.EventHandler(this.tb_SearchField_TextChanged);
             // 
             // btn_AddForm
             // 
@@ -164,6 +166,7 @@ namespace EvolutionGym.View.Memberships
             this.btn_DetailsForm.Text = "Detalles";
             this.btn_DetailsForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DetailsForm.UseVisualStyleBackColor = false;
+            this.btn_DetailsForm.Click += new System.EventHandler(this.btn_DetailsForm_Click);
             // 
             // btn_Delete
             // 
@@ -196,6 +199,7 @@ namespace EvolutionGym.View.Memberships
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Memberships_List";
             this.Text = "Memberships_List";
+            this.Load += new System.EventHandler(this.Memberships_List_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
