@@ -64,6 +64,7 @@ namespace EvolutionGym.View.Memberships
             this.lv_Membership.TabIndex = 17;
             this.lv_Membership.UseCompatibleStateImageBehavior = false;
             this.lv_Membership.View = System.Windows.Forms.View.Details;
+            this.lv_Membership.SelectedIndexChanged += new System.EventHandler(this.lv_Membership_SelectedIndexChanged);
             // 
             // ID
             // 
@@ -184,6 +185,7 @@ namespace EvolutionGym.View.Memberships
             this.btn_Delete.Size = new System.Drawing.Size(51, 37);
             this.btn_Delete.TabIndex = 23;
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // Memberships_List
             // 

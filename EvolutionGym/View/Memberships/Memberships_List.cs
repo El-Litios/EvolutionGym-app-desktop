@@ -89,7 +89,56 @@ namespace EvolutionGym.View.Memberships
 
         private void btn_DetailsForm_Click(object sender, EventArgs e)
         {
+            int membership_id = Convert.ToInt32(lv_Membership.SelectedItems[0].Text);
+            using (Connection con = new Connection()) {
+                var Membership = con.tblMembership.Include(m => m.Client)
+                                                  .Include(m => m.User)
+                                                  .Include(m => m.Type)
+                                                  .Include(m => m.Payment)
+                                                  .Where(m => m.MembershipID.Equals(membership_id)).FirstOrDefault();
+                if (Membership != null)
+                {
+                    Memberships_Details m_details_form = new Memberships_Details(Membership);
+                    m_details_form.ShowDialog();
+                    
+                }
+            }
+                
+        }
 
+        private void lv_Membership_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btn_DetailsForm.Enabled = true;
+            btn_Delete.Enabled = true;
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            ConfirmationForm cform = new ConfirmationForm();
+            DialogResult res = new DialogResult();
+            res = cform.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                int membership_id = Convert.ToInt32(lv_Membership.SelectedItems[0].Text);
+                using (Connection con = new Connection())
+                {
+                    var Membership = con.tblMembership.Where(m => m.MembershipID == membership_id).FirstOrDefault();
+
+                    con.Entry(Membership).State = EntityState.Deleted;
+                    con.SaveChanges();
+
+                    btn_Delete.Enabled = false;
+                    btn_DetailsForm.Enabled = false;
+
+                    List_Load(con.tblMembership
+                                        .Include(m => m.User)
+                                        .Include(m => m.Client)
+                                        .Include(m => m.Payment)
+                                        .Include(m => m.Type)
+                                        .ToList());
+                    
+                }
+            }
         }
     }
 }

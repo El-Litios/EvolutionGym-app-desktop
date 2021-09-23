@@ -39,6 +39,15 @@ namespace EvolutionGym.View.Memberships
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.lbl_ClientRut = new System.Windows.Forms.Label();
+            this.lbl_ClientFullName = new System.Windows.Forms.Label();
+            this.lbl_TrainerRut = new System.Windows.Forms.Label();
+            this.lbl_TrainerFullName = new System.Windows.Forms.Label();
+            this.lbl_MembershipCost = new System.Windows.Forms.Label();
+            this.lbl_PaymentMethod = new System.Windows.Forms.Label();
+            this.lbl_MembershipDateBegin = new System.Windows.Forms.Label();
+            this.lbl_MembershipDateEnd = new System.Windows.Forms.Label();
+            this.lbl_TypeMembership = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -141,11 +150,110 @@ namespace EvolutionGym.View.Memberships
             this.label10.TabIndex = 9;
             this.label10.Text = "Membresía:";
             // 
+            // lbl_ClientRut
+            // 
+            this.lbl_ClientRut.AutoSize = true;
+            this.lbl_ClientRut.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_ClientRut.Location = new System.Drawing.Point(167, 82);
+            this.lbl_ClientRut.Name = "lbl_ClientRut";
+            this.lbl_ClientRut.Size = new System.Drawing.Size(53, 17);
+            this.lbl_ClientRut.TabIndex = 10;
+            this.lbl_ClientRut.Text = "label11";
+            // 
+            // lbl_ClientFullName
+            // 
+            this.lbl_ClientFullName.AutoSize = true;
+            this.lbl_ClientFullName.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_ClientFullName.Location = new System.Drawing.Point(167, 137);
+            this.lbl_ClientFullName.Name = "lbl_ClientFullName";
+            this.lbl_ClientFullName.Size = new System.Drawing.Size(53, 17);
+            this.lbl_ClientFullName.TabIndex = 11;
+            this.lbl_ClientFullName.Text = "label11";
+            // 
+            // lbl_TrainerRut
+            // 
+            this.lbl_TrainerRut.AutoSize = true;
+            this.lbl_TrainerRut.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TrainerRut.Location = new System.Drawing.Point(167, 191);
+            this.lbl_TrainerRut.Name = "lbl_TrainerRut";
+            this.lbl_TrainerRut.Size = new System.Drawing.Size(53, 17);
+            this.lbl_TrainerRut.TabIndex = 12;
+            this.lbl_TrainerRut.Text = "label11";
+            // 
+            // lbl_TrainerFullName
+            // 
+            this.lbl_TrainerFullName.AutoSize = true;
+            this.lbl_TrainerFullName.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TrainerFullName.Location = new System.Drawing.Point(167, 245);
+            this.lbl_TrainerFullName.Name = "lbl_TrainerFullName";
+            this.lbl_TrainerFullName.Size = new System.Drawing.Size(53, 17);
+            this.lbl_TrainerFullName.TabIndex = 13;
+            this.lbl_TrainerFullName.Text = "label11";
+            // 
+            // lbl_MembershipCost
+            // 
+            this.lbl_MembershipCost.AutoSize = true;
+            this.lbl_MembershipCost.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_MembershipCost.Location = new System.Drawing.Point(167, 299);
+            this.lbl_MembershipCost.Name = "lbl_MembershipCost";
+            this.lbl_MembershipCost.Size = new System.Drawing.Size(53, 17);
+            this.lbl_MembershipCost.TabIndex = 14;
+            this.lbl_MembershipCost.Text = "label11";
+            // 
+            // lbl_PaymentMethod
+            // 
+            this.lbl_PaymentMethod.AutoSize = true;
+            this.lbl_PaymentMethod.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_PaymentMethod.Location = new System.Drawing.Point(167, 353);
+            this.lbl_PaymentMethod.Name = "lbl_PaymentMethod";
+            this.lbl_PaymentMethod.Size = new System.Drawing.Size(53, 17);
+            this.lbl_PaymentMethod.TabIndex = 15;
+            this.lbl_PaymentMethod.Text = "label11";
+            // 
+            // lbl_MembershipDateBegin
+            // 
+            this.lbl_MembershipDateBegin.AutoSize = true;
+            this.lbl_MembershipDateBegin.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_MembershipDateBegin.Location = new System.Drawing.Point(167, 407);
+            this.lbl_MembershipDateBegin.Name = "lbl_MembershipDateBegin";
+            this.lbl_MembershipDateBegin.Size = new System.Drawing.Size(53, 17);
+            this.lbl_MembershipDateBegin.TabIndex = 16;
+            this.lbl_MembershipDateBegin.Text = "label11";
+            // 
+            // lbl_MembershipDateEnd
+            // 
+            this.lbl_MembershipDateEnd.AutoSize = true;
+            this.lbl_MembershipDateEnd.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_MembershipDateEnd.Location = new System.Drawing.Point(167, 461);
+            this.lbl_MembershipDateEnd.Name = "lbl_MembershipDateEnd";
+            this.lbl_MembershipDateEnd.Size = new System.Drawing.Size(53, 17);
+            this.lbl_MembershipDateEnd.TabIndex = 17;
+            this.lbl_MembershipDateEnd.Text = "label11";
+            // 
+            // lbl_TypeMembership
+            // 
+            this.lbl_TypeMembership.AutoSize = true;
+            this.lbl_TypeMembership.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TypeMembership.Location = new System.Drawing.Point(167, 515);
+            this.lbl_TypeMembership.Name = "lbl_TypeMembership";
+            this.lbl_TypeMembership.Size = new System.Drawing.Size(53, 17);
+            this.lbl_TypeMembership.TabIndex = 18;
+            this.lbl_TypeMembership.Text = "label11";
+            // 
             // Memberships_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 575);
+            this.Controls.Add(this.lbl_TypeMembership);
+            this.Controls.Add(this.lbl_MembershipDateEnd);
+            this.Controls.Add(this.lbl_MembershipDateBegin);
+            this.Controls.Add(this.lbl_PaymentMethod);
+            this.Controls.Add(this.lbl_MembershipCost);
+            this.Controls.Add(this.lbl_TrainerFullName);
+            this.Controls.Add(this.lbl_TrainerRut);
+            this.Controls.Add(this.lbl_ClientFullName);
+            this.Controls.Add(this.lbl_ClientRut);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -160,6 +268,7 @@ namespace EvolutionGym.View.Memberships
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Memberships_Details";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +286,14 @@ namespace EvolutionGym.View.Memberships
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_ClientRut;
+        private System.Windows.Forms.Label lbl_ClientFullName;
+        private System.Windows.Forms.Label lbl_TrainerRut;
+        private System.Windows.Forms.Label lbl_TrainerFullName;
+        private System.Windows.Forms.Label lbl_MembershipCost;
+        private System.Windows.Forms.Label lbl_PaymentMethod;
+        private System.Windows.Forms.Label lbl_MembershipDateBegin;
+        private System.Windows.Forms.Label lbl_MembershipDateEnd;
+        private System.Windows.Forms.Label lbl_TypeMembership;
     }
 }
